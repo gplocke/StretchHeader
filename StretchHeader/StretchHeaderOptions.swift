@@ -15,6 +15,8 @@ open class StretchHeaderOptions {
     
     /// Work's only with notification update method
     open var isNavigationViewAnimated: Bool = true
+
+    open var isStretchy: Bool = true
     
     public enum HeaderPosition {
         case fullScreenTop

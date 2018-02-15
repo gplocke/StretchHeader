@@ -159,6 +159,11 @@ open class StretchHeader: UIView {
         scrollOffset += topInset
         
         if scrollOffset < 0 {
+     
+            if (options.isStretchy == false) {
+                scrollOffset = max(scrollOffset, -44.0)
+            }
+
             imageView.frame = CGRect(x: scrollOffset ,y: scrollOffset, width: contentSize.width - (scrollOffset * 2) , height: contentSize.height - scrollOffset);
         } else {
             imageView.frame = CGRect(x: 0, y: 0, width: contentSize.width, height: contentSize.height);
